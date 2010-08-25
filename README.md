@@ -9,8 +9,11 @@ Chutney is currently only targeted the iOS platform with focus on the iPhone, bu
 Chutney relies fully on HTML5 markup tags for its logical division of content. The following elements are important in this context:
 
 `section` - A section marks a specific content section of the application, comparable to the native iPhone `Panel`
+
 `figure` - A figure, for lack of better tags, is a scrolling content container, if the section is configured to utilize scrolling. Otherwise it is free to use
+
 `header` - A header, which is contained inside a section, is a toolbar, to which buttons and a title can be added
+
 `footer` - A footer, which contains tabs for navigation between primary sections
 
 ## Sections
@@ -18,12 +21,15 @@ Chutney relies fully on HTML5 markup tags for its logical division of content. T
 A section can be configured with three extended attributes:
 
 `chutney:Section` - the type of the section to be instantiated. Supported types are _empty_, `carousel` and `list`
+
 `chutney:Fullscreen` - a boolean (true/false) stating whether or not the section should cover the entire screen. Defaults to false.
+
 `chutney:Scroll` - a boolean (true/false) stating whether or not an empty section should have scrolling ability. Defaults to false.
 
 ### Carousel
 
 When using the `carousel` type, the following parameter can furthermore be added:
+
 `chutney:Carousel:Navigation` - a boolean (true(false) stating whether or not the carousel should show navigation dots at the bottom of the section. Defaults to false.
 
 A carousel is structured as follows:
@@ -97,7 +103,9 @@ An example of a footer looks as follows:
 To build an application, you simply need to set up the sections you need as documented above, and implement your own scripting for handling buttons etc. To instantiate an application, you must initialize an object of the type `Chutney`, which takes an object containing three parameters:
 
 `iPhoneIcon` - the URL of your icon, which must be 72x72 pixels
+
 `iPhoneIconGlass` - a boolean stating wether or not, iOS should add the glass effect to your icon by default. Defaults to true.
+
 `iPhoneStartup` - the URL of your startup splash screen for when your application is loaded from the Home screen. Must be 320x460 pixels.
 
 An application would then simply be structured as follows:
