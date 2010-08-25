@@ -21,8 +21,43 @@ A section can be configured with three extended attributes:
 `chutney:Fullscreen` - a boolean (true/false) stating whether or not the section should cover the entire screen. Defaults to false.
 `chutney:Scroll` - a boolean (true/false) stating whether or not an empty section should have scrolling ability. Defaults to false.
 
+### Carousel
+
 When using the `carousel` type, the following parameter can furthermore be added:
 `chutney:Carousel:Navigation` - a boolean (true(false) stating whether or not the carousel should show navigation dots at the bottom of the section. Defaults to false.
+
+A carousel is structured as follows:
+
+    <section chutney:Section="carousel" chutney:Carousel:Navigation="true">
+      <figure>
+        <article>First carousel item content here...</article>
+        <article>Second carousel item content here...</article>
+        <article>Third carousel item content here...</article>
+        ..
+        <article>nth carousel item content here...</article>
+      </figure>
+    </section>
+
+### List
+
+A list is structured as follows:
+
+    <section chutney:Section="list">
+      <figure>
+        <figcaption>A caption for a subpart of a list</figcaption>
+        <ul>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+        <figcaption>A caption for yet another subpart of a list</figcaption>
+        <ul>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </figure>
+    </section>
 
 ## Figures
 
