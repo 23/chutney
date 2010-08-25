@@ -62,3 +62,65 @@ A list is structured as follows:
 ## Figures
 
 A `figure` contained within a section that is either not a default type, or has scrolling enabled, will be the primary container for scrolling content.
+
+## Headers
+
+Headers are always contained within a section, and can by default contain two different items: a title (`h1`) and buttons (`button`). An example of a header looks as follows:
+
+    <section>
+      <header>
+        <h1>My title</h1>
+        <button class="left">Text label</button>
+        <button class="right"><img src="ButtonImage.png" .. /></button>
+      </header>
+      ..
+    </section>
+
+## The footer
+
+An application can only contain one `footer`, which is a tab bar positioned at the bottom of the screen. A footer contains links (`a`), which can either have a CSS selector for a specific section set using `chutney:Target`, or any other events assigned.
+
+The icon of the tab can be set using the `class` attribute. Currently only `performance`, `person` and `todo` are added as default, but more are to follow. Look in `Source/Resources/` for the examples to replicate.
+
+A bubble mark can be added to a tab item using the `mark` tag.
+
+An example of a footer looks as follows:
+
+    <footer>
+      <a class="performance" chutney:Target="#performance">Sales</a>
+      <a class="person" chutney:Target="#clients">Clients<mark>5</mark></a>
+      <a class="todo" onClick="alert('Pure JavaScript action with no section action!');">Todos</a>
+    </footer>
+
+# Building an application
+
+To build an application, you simply need to set up the sections you need as documented above, and implement your own scripting for handling buttons etc. To instantiate an application, you must initialize an object of the type `Chutney`, which takes an object containing three parameters:
+
+`iPhoneIcon` - the URL of your icon, which must be 72x72 pixels
+`iPhoneIconGlass` - a boolean stating wether or not, iOS should add the glass effect to your icon by default. Defaults to true.
+`iPhoneStartup` - the URL of your startup splash screen for when your application is loaded from the Home screen. Must be 320x460 pixels.
+
+An application would then simply be structured as follows:
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>My application</title>
+        <link href="Distribution/chutney-base.css" rel="stylesheet" />
+        <script src="Distribution/chutney-1.0.0.0-min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      </head>
+      <body>
+        <section ..>...</section>
+        <footer>...</footer>
+        <script>
+    var Application = new Chutney({
+      iPhoneIcon: 'YourAppIcon.png',
+      iPhoneIconGlass: false,
+      iPhoneStartup: 'YourStartupSplash.png'
+    });
+        </script>
+      </body>
+    </html>
+
+Currently only two interactions with sections are necessary: `<Application object name>.ShowSection` and `<Application object name>.HideSection`.
