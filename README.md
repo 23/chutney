@@ -13,4 +13,17 @@ Chutney relies fully on HTML5 markup tags for its logical division of content. T
 `header` - A header, which is contained inside a section, is a toolbar, to which buttons and a title can be added
 `footer` - A footer, which contains tabs for navigation between primary sections
 
-## `section`
+## Sections
+
+A section can be configured with three extended attributes:
+
+`chutney:Section` - the type of the section to be instantiated. Supported types are _empty_, `carousel` and `list`
+`chutney:Fullscreen` - a boolean (true/false) stating whether or not the section should cover the entire screen. Defaults to false.
+`chutney:Scroll` - a boolean (true/false) stating whether or not an empty section should have scrolling ability. Defaults to false.
+
+When using the `carousel` type, the following parameter can furthermore be added:
+`chutney:Carousel:Navigation` - a boolean (true(false) stating whether or not the carousel should show navigation dots at the bottom of the section. Defaults to false.
+
+## Figures
+
+A `figure` contained within a section that is either not a default type, or has scrolling enabled, will be the primary container for scrolling content.
