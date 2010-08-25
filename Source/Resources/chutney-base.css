@@ -1,0 +1,445 @@
+/*********** CSS reset for HTML 5 **********/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+	-webkit-user-select:none;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/********** General style **********/
+html, body
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+html, body, button
+{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+a
+{
+	text-decoration: none;	
+}
+
+/********** Navigation **********/
+footer
+{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 49px;
+	border-top: 1px solid #000000;
+	width: 100%;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(2%, #2e2e2e),  color-stop(50%, #151515), color-stop(51%, #000000));
+	padding: 0px 4px 0px 4px;
+	-webkit-box-sizing: border-box;
+	z-index: 0;
+}
+
+footer a
+{
+	-webkit-box-sizing: border-box;
+	color: #999999;
+	display: block;
+	margin: 2px 4px 0px 0px;
+	width: auto;
+	float: left;
+	height: 44px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 10px;
+	line-height: 10px;
+	text-align: center;
+	padding: 33px 0px 0px 0px;
+	overflow: hidden;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+
+footer a.active
+{
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.145);
+	background-position: center -44px;
+}
+
+footer a:last-child { margin-right: 0px; }
+
+footer a.person { background-image: url('Person.png'); }
+footer a.performance { background-image: url('Performance.png'); }
+footer a.todo { background-image: url('Todo.png'); }
+
+footer mark
+{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6bdc0), color-stop(50%, #e22d36), color-stop(51%, #dc020c), color-stop(100%, #af0002));
+    -webkit-border-radius: 50px;
+    -webkit-box-shadow: #000000 0px 1px 3px;
+    border: 2px solid #ffffff;
+    position: absolute;
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    top: 2px;
+    height: 14px;
+    white-space: nowrap;
+    padding: 0px 4px 0px 4px;
+}
+
+/********** Header *********/
+header
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cdd5df), color-stop(50%, #889bb3), color-stop(51%, #8195af), color-stop(100%, #6d84a2));
+	height: 42px;
+	border-top: 1px solid #cdd5df;
+	border-bottom: 1px solid #2d3642;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1000;
+}
+
+header h1
+{
+	position: absolute;
+	top: 11px;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	font-size: 20px;
+	color: #ffffff;
+	text-shadow: 0px -1px 1px #46505d;
+}
+
+header button
+{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8ea4c1), color-stop(50%, #5877a2), color-stop(51%, #476999), color-stop(100%, #4a6c9b));
+	margin: 6px 4px 6px 4px;
+	height: 29px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #30363e #354e71 #375073 #354e71;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	padding: 0px 9px 0px 9px;
+	-webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	text-shadow: 0px -1px 1px #354356;
+	font-size: 12px;
+	line-height: 12px;
+	position: absolute;
+}
+
+header button.left
+{
+	left: 0px;
+}
+
+header button.right
+{
+	right: 0px;
+}
+
+header button img
+{
+	display: block;
+}
+
+/********** Scrolling ***********/
+aside.scrollbar
+{
+	width: 4px;
+	right: 4px;
+	position: absolute;
+	overflow: hidden;;
+	-webkit-mask-box-image: url('ScrollbarMask.png') 2 0 2 0 stretch;
+	z-index: 1000;
+	-webkit-box-sizing: border-box;
+	border-width: 2px 0px 2px 0px;
+	-webkit-border-width: 2px 0px 2px 0px;
+}
+
+aside.scrollbar > meter
+{
+	-webkit-box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 2px;
+	width: 4px;
+	position: absolute;
+	right: 0px;
+	opacity: 1;
+}
+
+aside.scrollbar > meter.hidden
+{
+	opacity: 0;
+	-webkit-transition: opacity 500ms linear;
+}
+
+/********** Sections **********/
+section
+{	
+	/* Hidden by default */
+	display: none;
+	background-color: #ffffff;
+	position: absolute;
+	overflow: hidden;
+}
+
+section.striped
+{
+	background-color: #c5ccd4;
+	background-image: url('Striped.gif');
+	background-position: 0px 0px;
+	background-repeat: repeat;
+}
+
+/********** Section: caroussel **********/
+section.carousel
+{
+
+}
+
+section.carousel nav.carousel
+{
+	-webkit-box-align: center;
+	-webkit-box-pack: center;	
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0px;
+	vertical-align: middle;
+	display: -webkit-box;
+	bottom: 0px;
+}
+
+section.carousel nav m
+{
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 8px;
+	height: 8px;
+	-webkit-border-radius: 4px;
+	border-bottom-left-radius: 4px 4px;
+	border-bottom-right-radius: 4px 4px;
+	border-top-left-radius: 4px 4px;
+	border-top-right-radius: 4px 4px;
+	display: inline-block;
+	margin: 3px 3px 3px 3px;
+}
+
+section.carousel nav m.active
+{
+	background-color: rgba(0, 0, 0, 1);
+}
+
+/* Article represents a carousel item */
+section.carousel article
+{
+	float: left;
+}
+
+section.carousel figure
+{
+	overflow: hidden;
+	position: relative;
+}
+
+/********** Section: list **********/
+section.list
+{
+	
+}
+
+section.list figure
+{
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+}
+
+section.list figcaption
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b1ba), color-stop(5%, #909faa), color-stop(100%, #b8c1c8));
+	border-top: 1px solid #717d85;
+	border-bottom: 1px solid #989ea4;
+	display: block;
+	height: 20px;
+	color: #ffffff;
+	padding: 1px 0px 0px 12px;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 18px;
+	text-shadow: 0px 1px 1px #64696e;
+}
+
+section.list ul
+{
+	
+}
+
+section.list li
+{
+	padding: 12px 12px 12px 12px;
+	font-size: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+section.list li:last-child
+{
+	border-bottom: 0;
+}
+
+/********* Generic user interface elements **********/
+
+/* Definition list */
+dl
+{
+	margin: 0px 10px 15px 10px;
+}
+
+dd
+{
+	background: #ffffff;
+	border-left: 1px solid #a8abad;
+	border-right: 1px solid #a8abad;
+	border-top: 1px solid #a8abad;
+	position: relative;
+	padding: 14px 10px 13px 10px;
+	font-weight: bold;
+	height: 16px;
+	font-size: 17px;
+}
+
+dd:first-child
+{
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+dd:last-child
+{
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom: 1px solid #a8abad;
+}
+
+dd mark
+{
+	color: #516691;
+	width: 70px;
+	text-align: right;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: normal;
+	margin: 0px 5px 0px 0px;
+	background: transparent;
+}
+
+dd.link
+{
+    background-image: url('DDArrow.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+}
