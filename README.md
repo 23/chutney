@@ -131,4 +131,8 @@ An application would then simply be structured as follows:
       </body>
     </html>
 
-Currently only two interactions with sections are necessary: `<Application object name>.ShowSection` and `<Application object name>.HideSection`.
+Currently only two interactions with sections are necessary: `<Application object name>.ShowSection` and `<Application object name>.HideSection`. Both functions take three arguments:
+
+1. Section selector - a CSS selector identifying your selector
+2. Animation - using "null" will default to the _Slide_ animation
+3. Animation options - options specifying animation behaviour. For _Slide_ only `Direction` is supported and can have the following values: `left`, `right`, `up` and `down`
